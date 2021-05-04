@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback function</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        <h2>callback function in jquery</h2>
+    <div class="box1" style="background-color: blueviolet; height: 200px; width: 200px; ">
+    </div><br>
+   </center>
+   <button id="btn">click me</button><br>
+   
+    <script>
+    // $(document).ready(function(){
+    //     $('#btn').click(function(){
+    //          $('.box1').fadeOut(2000,function(){
+    //              $('.box1').html("<h2>this is callback function</h2>").fadeIn(2000);
+    //          });
+    //     });
+    // });
+    //with out callback function
+    $(document).ready(function(){
+        $('#btn').click(function(){
+             $('.box1').fadeOut(2000);
+                 $('.box1').html("<h2> this is callback function</h2>").fadeIn(2000);
+        });
+    });
+        
+    </script>
+</body>
+</html>

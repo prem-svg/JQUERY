@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding class dynamically in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .panel{
+            background-color: brown;
+            padding: 20px;
+        }
+    </style>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!
+    </div>
+    <div>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!
+    </div><button id="btn">add class</button>
+<script>
+    $(document).ready(function(){
+        $('#btn').click(function(){$("div").addClass("panel");});
+        
+    });
+</script>
+
+</body>
+</html>

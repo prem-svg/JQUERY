@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stop in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        <p id="flip" style="background-color: blueviolet;">i am prem</p>
+        <div id="panel" style="background-color: brown;padding: 10px;">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!
+        </div>
+        <button id="btn">stop</button>
+   </center>
+   
+    <script>
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+          });
+          $("#btn").click(function(){
+              $("#panel").stop();
+          });
+    });
+        
+    </script>
+</body>
+</html>

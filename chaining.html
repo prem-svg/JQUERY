@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chaining in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        <h2>chaining in jquery</h2>
+    <div class="box" style=" background-color: blueviolet; height: 200px; width: 200px; ">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt porro vitae corrupti necessitatibus. Quam tempora aspernatur unde ex provident repellat molestias pariatur harum dolorum ipsum. Saepe modi asperiores facere ipsa!</p>
+    </div><br>
+   </center>
+   <button id="btn">click me 1</button><br>  
+    <script>
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('.box').css({"font-family":"comic sans MS"}).animate({"height":"400px"}).animate({"top":"300px"});
+            
+        });
+    });
+        
+    </script>
+</body>
+</html>

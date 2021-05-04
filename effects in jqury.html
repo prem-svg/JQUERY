@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ready function</title>
+    <!-- <script src="‪C:\Users\ELCOT\Downloads\jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>welcome</h1>
+  <script>
+      $(document).ready(function(){
+          //hide
+        $("#box1").fadeOut("slow");
+          $("button").click(function(){
+             // $("#box").hide();
+             $("p:last").hide();
+             $("ul li:first").hide();
+             $("[href]").hide();
+             $(":radio").hide();
+             $(":text").hide();
+          });
+          //fade
+          $("#b1").click(function(){
+              $("#box1").fadeIn("slow");
+          });
+          $("#b2").click(function(){
+              $("#box1").fadeTo("slow",0.25);
+          });
+          //slide up,down
+          $("#flip").click(function(){
+            //   $("#panel").slideUp("slow");
+            $("#panel").slideToggle("slow");
+          })
+          $("#c").css({"background-color":"green"})
+      });
+  </script>
+  <p id="box"> hi i am prem</p>
+  <p id="c">i am full stack developer</p>
+  <ul>
+      <li>html</li>
+      <li>css</li>
+      <li>javascript</li>
+      <li>jquery</li>
+  </ul>
+  <a href="google.com">goolge</a><br>
+  <input type="text">
+  <input type="radio">
+  <button>click to hide</button><br><br>
+  <div id="box1" style="height: 500px;width: 500px;background-color: blue;"></div>
+  <button id="b1">fade in</button>
+  <button id="b2">fade to</button>
+  <br>
+  <p id="flip" style="background-color: blueviolet;">i am prem</p>
+  <div id="panel" style="background-color: brown;padding: 10px;">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!
+  </div>
+</body>
+</html>

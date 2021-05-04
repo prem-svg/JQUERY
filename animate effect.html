@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        <h2>animate event in jquery</h2>
+    <div class="box" style=" background-color: blueviolet; height: 200px; width: 200px; ">
+    </div><br>
+   </center>
+   <button id="btn">click me 1</button><br>
+   
+    <script>
+        
+    //    $(document).ready(function(){
+    //        $("#btn").click(function(){
+    //            $(".box").animate({height:'500px'});
+    //            $(".box").animate({left:'500px'});
+    //        });
+    //    });
+    //using relative values
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('.box').animate({width:'+=300px'});
+            $('.box').animate({width:'-=200px'});
+            $('.box').animate({height:'+=50px'});
+            $('.box').animate({height:'-=50px'});
+        });
+    });
+        
+    </script>
+</body>
+</html>

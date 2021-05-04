@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bind event in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form>
+         a value: <input type="text" id="a">
+         b value: <input type="text" id="b">
+         <button id="btn" type="button">calculate</button>
+         <p id="status"></p>
+         <hr>
+         <hr>
+         <p id="stat">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi amet excepturi hic, possimus libero maxime quas est nesciunt ullam doloremque error repellat quia? Facere ipsum ex, a veniam illum laborum.</p>
+    <button id="btn1">bind</button>
+    <button id="btn2">unbind</button>
+        </form>
+    <script>
+        $(document).ready(function(){
+            $("#btn").bind('click',add);
+            //multiple events
+            $("#a").bind('keyup',change);
+            //bind & unbind
+            
+        });
+        function add(){
+            var c=Number($("#a").val() + $("#b").val());
+            $("#status").html("total : "+c);
+        }
+        function change(){
+            $('#status').html("your a typing in value");
+        }
+        //unbind
+    </script>
+</body>
+</html>

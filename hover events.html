@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <center>
+        <h2>hover event in jquery</h2>
+    <div id="di" style="height: 400px; width: 400px; border: 1px solid green;">
+    </div>
+   </center>
+    <script>
+        $(document).ready(function(){
+        $('div').hover(function(){
+            $('#di').css({"background-color":"black"})
+        });
+        $('div').mouseleave(function(){
+            $('#di').css({"background-color":"yellow"})
+        });
+        });
+    </script>
+</body>
+</html>
