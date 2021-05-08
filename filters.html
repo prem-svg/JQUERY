@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .box1{
+            background-color: brown;
+            padding: 20px;
+        } 
+            body{
+                     padding: 0%;
+                     margin: 0%;
+                     background-color: blue;
+            }
+        
+    </style>
+    <center>
+        <h2>filters in jquery</h2>
+</center>
+    <div class="box1">
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! 
+        Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!</P>
+<br>
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! 
+        Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!</P>
+    <br>
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! 
+        Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!</P>
+ <br>
+    
+        <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! 
+        Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!</P>
+    </div><br>          
+    <button id="btn">edit odd</button><button id="btn1">edit even</button><button id="btn2">edit first</button><button id="btn3">edit last</button>
+    <button id="btn4">edit greater then to 1</button><button id="btn5">edit not equal to 1</button><button id="btn6">edit equal to
+        4</button>
+<script>
+    
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $(".box1 p:odd").css({"background-color":"yellow"});
+        }); 
+        $('#btn1').click(function(){
+            $(".box1 p:even").css({"background-color":"pink"});
+        }); 
+        $('#btn2').click(function(){
+            $(".box1 p:first").css({"background-color":"green"});
+        }); 
+        $('#btn3').click(function(){
+            $(".box1 p:last").css({"background-color":"gray"});
+        }); 
+        $('#btn4').click(function(){
+            $(".box1 p:gt(1)").css({"background-color":"light blue"});
+        }); 
+        $('#btn5').click(function(){
+            $('.box1 p:not(p:eq(1)').css({"background-color":"orange"});
+        }); 
+        $('#btn6').click(function(){
+            $(".box1 p:eq(4)").css({"background-color":"white"});
+        }); 
+    });
+   
+</script>
+
+</body>
+</html>

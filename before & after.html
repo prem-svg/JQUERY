@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>before and after in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .sample{
+            background-color: brown;
+            padding: 20px;
+        } 
+            body{
+                     padding: 0%;
+                     margin: 0%;
+                     background-color: rgb(131, 131, 236);
+            }
+        
+    </style>
+    <center>
+        <h2>before and after in jquery</h2>
+
+
+    <div class="sample">
+        <P>HI</P>
+        <P class="class1">I AM PREM</P>
+        <img src="../../banner.jpg" alt="banner" height="400px" width="50%">
+    </div><br>          
+    <button id="btn">select before </button>
+    <button id="btn1">select after</button>
+    
+</center>
+<script>
+    
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('img').before("<h2>i am before image</h2>");
+        }); 
+        $('#btn1').click(function(){
+            $("img").after("<h2>i am after image</h2>");
+        }); 
+    });
+   
+</script>
+
+</body>
+</html>

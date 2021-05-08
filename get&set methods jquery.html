@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get and set in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .box1{
+            background-color: brown;
+            padding: 20px;
+        }
+    </style>
+    <center>
+        <p>get and set in jquery</p>
+</center>
+    <div class="box1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+        Saepe voluptas quo consequatur nam blanditiis doloribus quos omnis! 
+        Vel autem numquam eligendi maxime pariatur optio vitae mollitia. Ea, aspernatur explicabo! Nostrum!
+    </div>
+    <img src="../../111.jpg" alt="emma" height="400px" width="400px">
+    <button id="btn">get text</button><button id="btn1">get html</button><button id="btn2">get attr</button><br>
+    <button id="btn3">set text</button><button id="btn4">set html</button><button id="btn5">set attr</button><br>
+<script>
+    
+    $(document).ready(function(){
+        //get
+        $('#btn').click(function(){
+            alert($("div").text("i am prem"));
+        }); 
+       
+        $('#btn1').click(function(){
+            alert($("div").html("i am prem"));
+        }); 
+        $('#btn2').click(function(){
+           alert($("img").attr("src"));
+        }); 
+        //set
+        $('#btn3').click(function(){
+            $("div").text("i am prem");
+        }); 
+       
+        $('#btn4').click(function(){
+            $("div").html("<h2>i am prem</h2>");
+        }); 
+        $('#btn5').click(function(){
+         $("img").attr("src","C:\Users\ELCOT\Desktop\back.jpg");
+        }); 
+    });
+    
+   
+</script>
+
+</body>
+</html>

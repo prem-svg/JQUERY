@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inserting data into php,mysql using jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .panel{
+            background-color: brown;
+            padding: 20px;
+        }
+    </style>
+    <form>
+        <label for="name">name</label>
+        <input type="text" id="name"><br>
+        <label for="city">city</label>
+        <input type="city" id="city"><br>
+        <button type="button" id="submit">save details</button>
+        <p id="out"></p>
+    </form>
+<script>
+    
+    $(document).ready(function(){
+        $('#submit').on('click','.del',function(){
+            var a=$("#name").val();
+            var b=$("#city").val();
+            $.post("save.php",{name:a,city:b},
+            ),
+            function(data){
+                $("#out").html(data);
+            }
+        }); 
+    });
+    
+   
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hieraechy filters in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .sample{
+            background-color: brown;
+            padding: 20px;
+        } 
+            body{
+                     padding: 0%;
+                     margin: 0%;
+                     background-color: blue;
+            }
+        
+    </style>
+    <center>
+        <h2>hierarchy filters in jquery</h2>
+</center>
+<ol>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JAVASCRIPT</li>
+    <li>BOOTSTRAP</li>
+    <li>JQUERY</li>
+</ol>
+    <div class="sample">
+        <P>HI</P>
+        <P class="sample">I AM PREM</P>
+        <P class="sample1">I WANT TO BECOME FULLSTACK DEVELOPER</P>
+        <P>I COMPLETED UG DEGREE IN B.SC COMPUTER SCIENCE</P>
+        <P>I AM FROM MADURAI</P>
+    </div><br>          
+    <button id="btn">click</button><button id="btn1">click</button><button id="btn2">click</button><button id="btn3">click</button><button id="btn4">click</button>
+<script>
+    
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('ol + div').css({"background-color":"yellow"});//ADJACENDT FILTER
+        }); 
+        $('#btn1').click(function(){
+            $("div p.sample1").css({"background-color":"green"});//DESCENDENT FILTER
+        }); 
+        $('#btn2').click(function(){
+            $('div > P').css({"background-color":"orange"});//CHILD SELECTOR
+        });
+        $('#btn3').click(function(){
+            $('.sample1 ~ p').css({"background-color":"gray"});//CIBLINGS SELECTORS
+        }); 
+        //hierrachy using attributes
+        $('#btn4').click(function(){
+            $('p[class=sample1]').css({"background-color":"red"});
+        }); 
+    });
+   
+</script>
+
+</body>
+</html>

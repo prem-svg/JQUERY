@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traversing in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .sample{
+            background-color: brown;
+            padding: 20px;
+        } 
+            body{
+                     padding: 0%;
+                     margin: 0%;
+                     background-color: rgb(131, 131, 236);
+            }
+        
+    </style>
+    <center>
+        <h2>traversing in jquery</h2>
+
+
+    <div class="sample">
+        <P>HI</P>
+        <P class="class1">I AM PREM</P>
+        <P id="para1">I WANT TO BECOME FULLSTACK DEVELOPER</P>
+        <P class="class2">I COMPLETED UG DEGREE IN B.SC COMPUTER SCIENCE</P>
+        <P id="para2">I AM FROM MADURAI</P>
+        <P id="para3">I Am studying msdurs college</P>
+    </div><br>          
+    <button id="btn">select prev </button>
+    <button id="btn1">select next</button>
+    <button id="btn2">select parants</button>
+    <button id="btn3">select parent until</button>
+    <button id="btn4">find</button>
+</center>
+<script>
+    
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('.class2').prev().css({"background-color":"yellow"});
+        }); 
+        $('#btn1').click(function(){
+            $(".class2").next().css({"background-color":"green"});
+        }); 
+        $('#btn2').click(function(){
+            $('.class2').parents().css({"background-color":"orange"});
+        });
+        $('#btn3').click(function(){
+            $('.class2').parentsUntil().css({"background-color":"gray"});
+        }); 
+        $('#btn4').click(function(){
+            $('.sample').find('.class2').css({"background-color":"red"});
+        }); 
+    });
+   
+</script>
+
+</body>
+</html>

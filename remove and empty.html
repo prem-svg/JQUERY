@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove and empty in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .sample{
+            background-color: brown;
+            padding: 20px;
+        } 
+        .sampl{
+            background-color: rgb(18, 155, 79);
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+        } 
+            body{
+                     padding: 0%;
+                     margin: 0%;
+                     background-color: rgb(131, 131, 236);
+            }
+        
+    </style>
+    <center>
+        <h2>remove and empty in jquery</h2>
+        <div class="samples">
+            <P>HI</P>
+            <P class="sample">I AM PREM</P>
+            <p id="feed"></p>
+            <P class="sample1">I WANT TO BECOME FULLSTACK DEVELOPER</P>
+            <P>I COMPLETED UG DEGREE IN B.SC COMPUTER SCIENCE</P>
+            <P>I AM FROM MADURAI</P>
+        </div>
+        <p id="feed1"></p><br>          
+    <button id="btn">remove </button>
+    <button id="btn1">empty</button>
+    <button id="btn2">remove class</button>
+    <button id="btn3">add class</button>
+    
+</center>
+<script>
+    
+    $(document).ready(function(){
+        $('#btn').click(function(){
+            $('.sample').remove();
+            $("#feed").html("<h2>your para has been removed").fadeIn(2000);
+        }); 
+        $('#btn1').click(function(){
+            $('.samples').remove();
+            $("#feed1").html("<h2>your div has been removed").fadeIn(2000);
+
+
+        }); 
+    });
+   
+</script>
+
+</body>
+</html>

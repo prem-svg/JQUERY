@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>read value in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .panel{
+            background-color: brown;
+            padding: 20px;
+        }
+    </style>
+   <table cellpadding="5px" border="1px" id="mytable">
+       <tr>
+           <th>sno</th>
+           <th>name</th>
+           <th>city</th>
+           <th>delete</th>
+       </tr>
+       <tr>
+           <td>1</td>
+           <td>raja</td>
+           <td>salam</td>
+       </tr>
+       <tr>
+        <td>2</td>
+        <td>ram</td>
+        <td>madurai</td>
+    </tr>
+   </table>
+<button id="btn">read values</button>
+   <p id="output">__</p>
+<script>
+    
+    $(document).ready(function(){
+     
+        $('#btn').on('click',function(){
+            var vals="";
+            $("#mytable tr").each(function () {
+                vals+=(this).find("td:eq(1)").text();
+            });
+            $("#output").html(vals);
+        });
+    });
+    
+   
+</script>
+
+</body>
+</html>

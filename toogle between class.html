@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toogle between class in jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        .bold{
+            background-color: rgb(18, 155, 79);
+        } 
+        .bold1{
+            font-weight: bold;
+            color: chartreuse;
+        } 
+            body{
+                     padding: 0%;
+                     margin: 0%;
+                     background-color: rgb(131, 131, 236);
+            }
+        
+    </style>
+    <center>
+        <h2>toogle between class in jquery</h2>
+<p id="para1">I WANT TO BECOME FULLSTACK DEVELOPER</p>
+<p  id="para2">I COMPLETED UG DEGREE IN B.SC COMPUTER SCIENCE</p>
+    <br>
+    <button id="btn2">toggle class</button>
+</center>
+<script>
+    
+    $(document).ready(function(){
+        $('#btn2').click(function(){
+            $('p#para1').toggleClass("bold bold1");
+
+        }); 
+    });
+   
+</script>
+
+</body>
+</html>
