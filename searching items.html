@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searching items</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" id="i" placeholder="search">
+    <br>
+    <table>
+        <thead>
+            <th>first name</th>
+            <th>last name</th>
+            <th>email</th>
+        </thead>
+        <tbody id='body'>
+            <tr>
+            <td>prem</td>
+            <td>kumar</td>
+            <td>123@gmail.com</td>
+        </tr>
+        <tr>
+            <td>prasath</td>
+            <td>kumar</td>
+            <td>abc@gmail.com</td>
+        </tr>
+    <tr>    
+            <td>ram</td>
+            <td>kumar</td>
+            <td>xyz@gmail.com</td>
+        </tr>
+    <tr>
+            <td>pravin</td>
+            <td>kumar</td>
+            <td>pqr@gmail.com</td>
+        </tr>
+        </tbody>
+    </table>
+<script>
+    
+    $(document).ready(function(){
+     $("#i").on("keyup",function(){
+         let value=$(this).val().toLowerCase();
+         $("#body tr").filter(function(){
+             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+     });
+     });
+    });
+   
+</script>
+
+</body>
+</html>
